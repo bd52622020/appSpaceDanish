@@ -11,6 +11,7 @@ def ispalin(word):
         
 
 
+
 '''
 question 2
 '''
@@ -25,11 +26,10 @@ print("Current date and time: " , rn)
 print("Current year: " , today.strftime("%Y"))
 print("Current month of year: ", today.strftime("%B, of %Y"))
 print("Current day: ", today.strftime("%A") )
-print("Current Week number: " + str((today.isocalendar()[1]) ) + " of " + today.strftime("%Y") )
-print("Current Day of year: " , day_of_year)
+print("Current Week number: ", today.strftime("%W") )
+print( "Current Day of year: " , today.strftime("%j") )                                       
 print("Current Day of the month: ", today.strftime("%d"))
-print( "Current Day of the week: " + str((today.isocalendar()[-1]) ) )
-
+print( "Current Day of the week: ", today.strftime("%w"))
 
 
 
@@ -42,7 +42,6 @@ from datetime import timedelta
 
 newdate = rn - timedelta(days=30)
 print("Date 30 days ago: " , newdate.strftime("%d/%m/%Y"))
-
 
 
 '''
