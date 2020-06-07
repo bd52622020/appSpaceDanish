@@ -1,0 +1,15 @@
+What is multithreading?
+
+Multithreading is the ability of a single processing unit to be able to concurrently execute multiple threads or programmes. 
+
+What is multiprocessing?
+
+This is simply the ability of a computer to use 2 or more processing units and allocate tasks between them. They share the main-
+memory and peripherals so they can process programs simultaneously. 
+
+Does python use multiprocessing?
+
+In Python, single-CPU use is caused by the global interpreter lock (GIL), which allows only one thread to carry the Python 
+interpreter at any given time. The GIL was implemented to handle a memory management issue, but as a result, Python is limited 
+to using a single processor. This GIL can be unlocked via the multiprocesser module and allows python to distribute tasks among
+as many processers as you have or wish to use. 
