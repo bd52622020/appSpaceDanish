@@ -38,6 +38,12 @@ def checkpass():
     if not re.search("[0-9]", password):   
         print('Password should have at least one numeral') 
         pwd = False
+    if len(password) < 6:
+        print('Password should be atleast 6 characters')
+        pwd = False 
+    if len(password) > 16:
+        print('Password should not be longer then 16 characters')
+        pwd = FalseH 
     if pwd == True:
         print("Password is Correct")
 
