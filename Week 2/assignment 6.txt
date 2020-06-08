@@ -25,7 +25,7 @@ Question 3
 
 
 def checkpass():
-    SpecialSym =['$', '@', '#', '%']
+    special =['$', '@', '#', '%']
     pwd = True
     password = input("Please enter a password: ")
     if not any(char.islower() for char in password): 
@@ -34,7 +34,7 @@ def checkpass():
     if not any(char.isupper() for char in password): 
         print('Password should have at least one uppercase letter') 
         pwd = False
-    if not any(char in SpecialSym for char in password): 
+    if not any(char in special for char in password): 
         print('Password should have at least one of the symbol $@#') 
         pwd = False
     if not any(char.isdigit() for char in password): 
