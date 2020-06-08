@@ -1,0 +1,79 @@
+
+
+'''
+Question 1
+'''
+
+def orderdict(dict):
+        print(sorted(dict.items()))
+
+
+
+'''
+Question 2
+'''
+
+class Python_Class():
+    def get_String(self):
+        userstring = input("Enter your string: ")
+    def print_String(self):
+        print(userstring.upper())
+ 
+'''
+Question 3
+'''
+
+
+def checkpass():
+    SpecialSym =['$', '@', '#', '%']
+    pwd = True
+    password = input("Please enter a password: ")
+    if not any(char.islower() for char in password): 
+        print('Password should have at least one lowercase letter') 
+        pwd = False
+    if not any(char.isupper() for char in password): 
+        print('Password should have at least one uppercase letter') 
+        pwd = False
+    if not any(char in SpecialSym for char in password): 
+        print('Password should have at least one of the symbol $@#') 
+        pwd = False
+    if not any(char.isdigit() for char in password): 
+        print('Password should have at least one numeral') 
+        pwd = False
+    if pwd == True:
+        print("Password is Correct")
+
+
+'''
+Question 4
+'''
+def starpattern(x = 5):
+    for i in range(x):
+        for j in range(i):
+            print("*", end="")
+        print()
+    for i in range(x):
+        for j in range(x-i):
+            print("*", end="")
+        print()
+
+starpattern()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
