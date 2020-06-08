@@ -1,4 +1,4 @@
-
+import re
 
 '''
 Question 1
@@ -23,25 +23,24 @@ class Python_Class():
 Question 3
 '''
 
-
 def checkpass():
-    special =['$', '@', '#', '%']
     pwd = True
     password = input("Please enter a password: ")
-    if not any(char.islower() for char in password): 
+    if not re.search("[a-z]", password): 
         print('Password should have at least one lowercase letter') 
         pwd = False
-    if not any(char.isupper() for char in password): 
+    if not re.search("[A-Z]", password):  
         print('Password should have at least one uppercase letter') 
         pwd = False
-    if not any(char in special for char in password): 
-        print('Password should have at least one of the symbol $@#') 
+    if not re.search("[@$£#%]", password):  
+        print('Password should have at least one of the symbol @$£#%') 
         pwd = False
-    if not any(char.isdigit() for char in password): 
+    if not re.search("[0-9]", password):   
         print('Password should have at least one numeral') 
         pwd = False
     if pwd == True:
         print("Password is Correct")
+
 
 
 '''
@@ -56,9 +55,6 @@ def starpattern(x = 5):
         for j in range(x-i):
             print("*", end="")
         print()
-
-starpattern()
-
 
 
 
