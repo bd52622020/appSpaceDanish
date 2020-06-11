@@ -1,0 +1,60 @@
+'''
+Question 1
+'''
+
+import os 
+import platform
+def checkos():
+    '''Checks the current OS systems, versions and gives you the current working directory'''
+    print(platform.system())
+    print(platform.release())
+    print(platform.version())
+    print(platform.machine())
+    print(os.getcwd())
+ 
+'''
+Question 2
+'''  
+def checkrightangletri(x, y, z):
+    if x > y and x > z:
+        if (x ** 2) == ((y ** 2) + (z ** 2)):
+            print("Yes")
+        else:
+            print("No")
+    elif y > x and y > z:
+            if (y ** 2) == ((x ** 2) + (z ** 2)):
+                print("Yes")
+            else:
+                print("No")
+    elif (z ** 2) == ((y ** 2) + (x ** 2)):
+        print("Yes")
+    else:
+        print("No")
+
+        
+'''
+Question 3
+'''        
+def concatatenatedict():
+    a={1:10, 2:20} 
+    b={3:30, 4:40} 
+    c={5:50, 6:60}
+    d = {}
+    for e in (a,b,c):
+        d.update(e)
+    print(type(d))
+    print(d)
+    
+'''
+Question 4
+'''       
+def checkifkeyexists(key):
+    d = {1: 10, 2: 20, 3: 30, 4: 40, 5: 50, 6: 60}
+    if key in d:
+        print("This Key is in the Dictionary")
+    else:
+        print("This Key is not in the Dictionary")
+
+
+
+
