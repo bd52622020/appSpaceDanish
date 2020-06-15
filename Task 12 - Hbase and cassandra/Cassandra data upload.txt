@@ -1,0 +1,51 @@
+CREATE TABLE moviedata (
+	movie_title text,
+	video_release_date date,
+	IMDb URL text,
+	unknown int,
+	Action int,
+	Adventure int,
+	Animation int,
+	Childrens int,
+	Comedy int,
+	Crime int,Documentary int,
+	Drama int,
+	Fantasy int,
+	Film-Noir int,
+	Horror int,
+	Musical int,
+	Mystery int,
+	Romance int,
+	Sci-Fi int,
+	Thriller int,
+	War int,
+	Western int,
+	PRIMARY KEY (movie_title)
+	);
+
+COPY moviedata (
+	movie_title,
+	video_release_date,
+	IMDb URL,
+	unknown,
+	Action,
+	Adventure,
+	Animation,
+	Childrens,
+	Comedy,
+	Crime,
+	Documentary,
+	Drama,
+	Fantasy,
+	Film-Noir,
+	Horror,
+	Musical,
+	Mystery,
+	Romance,
+	Sci-Fi,
+	Thriller,
+	War,
+	Western
+	)
+	FROM '/user/danish/data/u.item' WITH DELIMITER="|" AND HEADER=FALSE
+
